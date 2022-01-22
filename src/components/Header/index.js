@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { FiSearch, FiSun } from 'react-icons/fi';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 import * as S from './styles';
 
 export function Header(){
+    const { handleToggleTheme, selectedTheme } = useContext(ThemeContext);
+
     return (
         <S.Container>
             <h1 className="logo">NFT CPunk</h1>
@@ -15,7 +19,10 @@ export function Header(){
                 <a href="#">Marketplace</a>
                 <a href="#">Create</a>
             </nav>
-            <S.ButtonToggleTheme>
+            <S.ButtonToggleTheme 
+                onClick={handleToggleTheme}
+                isLighted={selectedTheme === 'light'}
+            >
                 <FiSun />
             </S.ButtonToggleTheme>
             <S.ButtonGetIn>Get in</S.ButtonGetIn>

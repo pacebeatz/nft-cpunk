@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+
+    background-color: ${props => props.theme.background};
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 `;

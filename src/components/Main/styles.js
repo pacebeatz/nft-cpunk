@@ -16,12 +16,12 @@ export const Container = styled.div`
     }
 
     h2 {
-        color: #fff;
+        color: ${props => props.theme.title};
         font-size: 3rem;
 
         strong {
             margin-left: 16px;
-            color: #aaa;
+            color: ${props => props.theme.text};
         }
     }
 
@@ -35,7 +35,7 @@ export const Container = styled.div`
         justify-content: space-between;
     }
 
-    @media(max-width: 480px){
+    @media(max-width: var(--mobile)){
         height: auto;
         flex-direction: column;
         
@@ -60,10 +60,10 @@ export const OwnerContainer = styled.div`
 
     p {
         font-weight: bold;
-        color: #fff;
+        color: ${props => props.theme.title};
     }
 
     span {
-        color: #aaa;
+        color: ${props => props.theme.text};
     }
 `;

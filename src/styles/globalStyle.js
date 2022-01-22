@@ -6,12 +6,19 @@ export default createGlobalStyle`
         margin: 0;
         box-sizing: 0;
 
-        
         transition: all 150ms linear;
     }
 
+    :root {
+        --mobile: 480px;
+        --tablet: 768px;
+
+        --primary-color: #fff36e;
+    }
+
     html, body{
-        font-family: 'IBM Plex Sans', sans-serif;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Questrial', sans-serif;
     }
 
     a{
@@ -32,8 +39,6 @@ export default createGlobalStyle`
     #root {
         width: 100%;
         min-height: 100vh;
-
-        background-color: #151515;
     }
 
     @media(max-width: 768px){

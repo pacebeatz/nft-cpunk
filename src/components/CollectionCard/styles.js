@@ -9,10 +9,10 @@ export const Container = styled.li`
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: #1c1c1e;
-    color: #fff;
+    background-color: ${props => props.theme.complementary};
+    color: ${props => props.theme.title};
 
-    border: 2px solid ${props=> props.selected ? 'rgb(255,243,110)' : 'transparent'};
+    border: 2px solid ${props=> props.selected ? props.theme.primary : 'transparent'};
 
     border-radius: 15px;
 
@@ -23,7 +23,7 @@ export const Container = styled.li`
     figure {
         height: 800px;
         overflow: hidden;
-        background: #333;
+        background: ${props => props.theme.complementary};
 
         img {
             width: 100%;
@@ -43,7 +43,7 @@ export const Container = styled.li`
         font-size: 1.5rem;
         strong {
             margin-left: 8px;
-            color: #bbb;
+            color: ${props => props.theme.text};
         }
     }
 
@@ -57,7 +57,7 @@ export const Container = styled.li`
         font-weight: bold;
 
         svg {
-            color: rgb(255,243,110);
+            color: ${props => props.theme.primary};
         }
 
         span {

@@ -1,4 +1,4 @@
-import { PunkProvider } from './contexts/PunkContext';
+import Providers from './contexts';
 
 import { Home } from './pages/Home';
 
@@ -7,9 +7,9 @@ import GlobalStyle from './styles/globalStyle';
 function App() {
   return (
     <>
-      <PunkProvider>
+      <Providers>
         <Home />
-      </PunkProvider>
+      </Providers>
       <GlobalStyle />
     </>
   );
